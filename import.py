@@ -1,7 +1,6 @@
 import lib.code_extract_specific_problem as code_extract
 import sys
 import getopt
-#import lib.code 
 
 argc = len(sys.argv)
 argv = sys.argv
@@ -23,9 +22,11 @@ else:
 	print(page_number)
 	for i in range(1,int(page_number)):
 		submission_id = submission_id + code_extract.get_submission_id(contest_id,problem_char,page_number)
-
-
+	submission_id=[el.replace('\n', '') for el in submission_id]
+	
 	for i in submission_id:
-		source=code_extract.extract_source_code(contest_id,i)
-		print(source)				
+                source=code_extract.extract_source_code(contest_id,i)
+                print(source)
+
+#	submission_id=filter(lambda x: x!='\n', submission_id)
 	#print(submission_id)	
