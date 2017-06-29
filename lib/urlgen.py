@@ -8,5 +8,5 @@ def generate_submission_url(contest_id,submission_id):
 
 def generate_problem_url(contest_id,problem_char,page_number):
 	"""Generates url for problem submissions of a particular problem """
-	url = Codeforces.BASE_URL + "/problemset/status/" + str(contest_id) + "/problem/" + problem_char + "/page/" + page_number;
+	url = Codeforces.BASE_URL + "/problemset/status/" + str(contest_id) + "/problem/" + problem_char + "/page/" + str(page_number);
 	return url 
