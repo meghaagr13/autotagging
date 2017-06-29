@@ -49,6 +49,7 @@ def fix_eol(code):
 	return code
 
 def get_submission_id(contest_id,problem_char,page_number):
+        url=urlgen.generate_problem_url(contest_id,problem_char,page_number)
         url="http://codeforces.com/problemset/status/816/problem/B"
         r=requests.get(url)
         data=r.text
