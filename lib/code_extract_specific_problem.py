@@ -31,7 +31,7 @@ See lxml library documentation for more help regarding html parsing.
 	else:
 		#parses html at codeforces.com/contest/contest_id/submission/submission_id to extract source_code
 		tree2 = html.fromstring(response.text)
-		code = tree2.xpath('//*[@id="pageContent]/div[3]/pre/text()"')
+		code = tree2.xpath('//*[@id="pageContent"]/div[3]/pre/text()')
 
 	try:
 		if len(code) > 0:
