@@ -1,5 +1,5 @@
 import sys
-sys.path.append('/home/dsinghvi/project/ml/codeforces_problem/lib')
+sys.path.append('/home/megha/ml/lib')
 from lxml import html
 import urlgen
 import httprequest
@@ -35,10 +35,11 @@ See lxml library documentation for more help regarding html parsing.
 
 	try:
 		if len(code) > 0:
-			return fix_eol(code[0])
+			return fix_eol(code[0]+'$')
 		else:
+			return ""
 			#received empty content. unable to extract submissions using html parser
-			raise ValueError('Empty Content')
+		#	raise ValueError('Empty Content')
 	
 	except ValueError as ex:
 		print(ex.message)
