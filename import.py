@@ -26,11 +26,11 @@ else:
 
 	list_code=[]
 	#submission_id = ["27876341","27911757","27851671"] 
-	with open('data','w') as f:
+	with open('bin_pos','a') as f:
 		for i in submission_id:
 			source=code_extract.extract_source_code(contest_id,i)
 			list_code+=[source]
-			source=(source+'$').replace('\r','')
+			source=(source).replace('\r','')
 			f.write(str(source))
 #	text_file.close()
 #	submission_id=filter(lambda x: x!='\n', submission_id)
