@@ -30,7 +30,8 @@ else:
 		for i in submission_id:
 			source=code_extract.extract_source_code(contest_id,i)
 			list_code+=[source]
-			f.write(str(source)+'$')
+			source=(source+'$').replace('\r','')
+			f.write(str(source))
 #	text_file.close()
 #	submission_id=filter(lambda x: x!='\n', submission_id)
 	#print(submission_id)	
