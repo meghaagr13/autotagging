@@ -25,7 +25,7 @@ else:
 	submission_id=[el.replace('\n', '') for el in submission_id]
 
 	list_code=[]
-	submission_id = ["27876341","27911757","27851671"] 
+	#submission_id = ["27876341","27911757","27851671"] 
 	with open('data','w') as f:
 		for i in submission_id:
 			source=code_extract.extract_source_code(contest_id,i)

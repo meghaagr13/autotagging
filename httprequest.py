@@ -1,6 +1,6 @@
 import requests
 import sys
-from codeforces_importer.exception import RequestFailureException
+from exception import RequestFailureException
 
 
 def send_get_request(url):
