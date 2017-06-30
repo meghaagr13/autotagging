@@ -19,14 +19,18 @@ else:
 	problem_char = argv[2]
 	dir_path = argv[3]
 	page_number = argv[4]
-	print(page_number)
+	#print(page_number)
 	for i in range(1,int(page_number)):
 		submission_id = submission_id + code_extract.get_submission_id(contest_id,problem_char,page_number)
 	submission_id=[el.replace('\n', '') for el in submission_id]
-	
-	for i in submission_id:
-                source=code_extract.extract_source_code(contest_id,i)
-                print(source)
 
+	list_code=[]
+	submission_id = ["27876341","27911757","27851671"] 
+	with open('data','w') as f:
+		for i in submission_id:
+			source=code_extract.extract_source_code(contest_id,i)
+			list_code+=[source]
+			f.write(str(source)+'$')
+#	text_file.close()
 #	submission_id=filter(lambda x: x!='\n', submission_id)
 	#print(submission_id)	
